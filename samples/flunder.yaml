@@ -1,0 +1,8 @@
+apiVersion: sample.k8s.com/v1alpha1
+kind: Flunder
+metadata:
+  namespace: default
+  name: hello
+spec:
+  referenceType: Flunder
+  flunderReference: hello

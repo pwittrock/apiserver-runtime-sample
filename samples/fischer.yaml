@@ -1,0 +1,6 @@
+apiVersion: sample.k8s.com/v1alpha1
+kind: Fischer
+metadata:
+  name: hello-world
+disallowedFlunders:
+  - "hello-world"
