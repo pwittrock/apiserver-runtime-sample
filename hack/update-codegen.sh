@@ -35,10 +35,10 @@ SCRIPT_ROOT=$(dirname "${BASH_SOURCE[0]}")/..
 CODEGEN_PKG=${CODEGEN_PKG:-$(cd "${SCRIPT_ROOT}"; ls -d -1 ./vendor/k8s.io/code-generator 2>/dev/null || echo ../code-generator)}
 
 # clean up generated code
-#find . -name "zz_generated.*" | xargs rm
-#rm -rf pkg/generated/clientset
-#rm -rf pkg/generated/informers
-#rm -rf pkg/generated/listers
+find . -name "zz_generated.*" | xargs rm
+rm -rf pkg/generated/clientset
+rm -rf pkg/generated/informers
+rm -rf pkg/generated/listers
 
 # generate the code with:
 # --output-base    because this script should also be able to run inside the vendor dir of

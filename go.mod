@@ -9,9 +9,8 @@ require (
 	github.com/golangci/golangci-lint v1.30.0
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/imdario/mergo v0.3.9 // indirect
-	github.com/pwittrock/apiserver-runtime v0.0.0-20200902181131-d48eccf266a5
+	github.com/pwittrock/apiserver-runtime v0.0.0-20200904163627-bd394416b928
 	k8s.io/apimachinery v0.19.0
-	k8s.io/apiserver v0.19.0
 	k8s.io/client-go v0.19.0
 	k8s.io/code-generator v0.19.0
 	k8s.io/component-base v0.19.0
