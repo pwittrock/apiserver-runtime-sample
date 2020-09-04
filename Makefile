@@ -6,7 +6,7 @@ all: codegen fix fmt vet lint test tidy
 
 docker:
 	GOOS=linux GOARCH=amd64 go build -o install/bin/apiserver
-		docker build --tag docker apiserver-runtime-sample:v0.0.0 install
+	docker build install --tag apiserver-runtime-sample:v0.0.0
 
 install: docker
 	kustomize build install | kubectl apply -f -

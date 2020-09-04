@@ -78,15 +78,21 @@ func (f *Flunder) GetObjectMeta() *metav1.ObjectMeta {
 	return &f.ObjectMeta
 }
 
-// New implements resource.Object
-func (Flunder) New() runtime.Object {
-	return &Flunder{}
+// IsInternalVersion returns true -- v1alpha1.Flunder is used as the internal version.
+// IsInternal implements resource.Object.
+func (Flunder) IsInternalVersion() bool {
+	return true
 }
 
 // NamespaceScoped returns true to indicate Flunder is a namespaced resource.
 // NamespaceScoped implements resource.Object.
 func (Flunder) NamespaceScoped() bool {
 	return true
+}
+
+// New implements resource.Object
+func (Flunder) New() runtime.Object {
+	return &Flunder{}
 }
 
 // NewList implements resource.Object

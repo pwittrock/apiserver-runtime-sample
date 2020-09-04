@@ -61,15 +61,21 @@ func (f *Fischer) GetObjectMeta() *metav1.ObjectMeta {
 	return &f.ObjectMeta
 }
 
-// New implements resource.Object
-func (Fischer) New() runtime.Object {
-	return &Fischer{}
+// IsInternalVersion returns true -- v1alpha1.Fischer is used as the internal version.
+// IsInternal implements resource.Object.
+func (Fischer) IsInternalVersion() bool {
+	return true
 }
 
 // NamespaceScoped returns false to indicate Fischer is NOT a namespaced resource.
 // NamespaceScoped implements resource.Object.
 func (Fischer) NamespaceScoped() bool {
 	return false
+}
+
+// New implements resource.Object
+func (Fischer) New() runtime.Object {
+	return &Fischer{}
 }
 
 // NewList implements resource.Object

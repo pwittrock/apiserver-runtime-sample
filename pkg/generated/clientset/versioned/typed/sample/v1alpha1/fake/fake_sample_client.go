@@ -36,6 +36,10 @@ func (c *FakeSampleV1alpha1) Flunders(namespace string) v1alpha1.FlunderInterfac
 	return &FakeFlunders{c, namespace}
 }
 
+func (c *FakeSampleV1alpha1) Fortunes(namespace string) v1alpha1.FortuneInterface {
+	return &FakeFortunes{c, namespace}
+}
+
 // RESTClient returns a RESTClient that is used to communicate
 // with API server by this client implementation.
 func (c *FakeSampleV1alpha1) RESTClient() rest.Interface {

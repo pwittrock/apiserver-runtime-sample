@@ -11,6 +11,7 @@ require (
 	github.com/imdario/mergo v0.3.9 // indirect
 	github.com/pwittrock/apiserver-runtime v0.0.0-20200902181131-d48eccf266a5
 	k8s.io/apimachinery v0.19.0
+	k8s.io/apiserver v0.19.0
 	k8s.io/client-go v0.19.0
 	k8s.io/code-generator v0.19.0
 	k8s.io/component-base v0.19.0

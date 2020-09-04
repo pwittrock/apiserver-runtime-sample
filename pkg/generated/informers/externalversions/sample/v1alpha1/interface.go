@@ -28,6 +28,8 @@ type Interface interface {
 	Fischers() FischerInformer
 	// Flunders returns a FlunderInformer.
 	Flunders() FlunderInformer
+	// Fortunes returns a FortuneInformer.
+	Fortunes() FortuneInformer
 }
 
 type version struct {
@@ -49,4 +51,9 @@ func (v *version) Fischers() FischerInformer {
 // Flunders returns a FlunderInformer.
 func (v *version) Flunders() FlunderInformer {
 	return &flunderInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
+}
+
+// Fortunes returns a FortuneInformer.
+func (v *version) Fortunes() FortuneInformer {
+	return &fortuneInformer{factory: v.factory, namespace: v.namespace, tweakListOptions: v.tweakListOptions}
 }

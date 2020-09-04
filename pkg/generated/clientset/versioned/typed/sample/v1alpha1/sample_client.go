@@ -28,6 +28,7 @@ type SampleV1alpha1Interface interface {
 	RESTClient() rest.Interface
 	FischersGetter
 	FlundersGetter
+	FortunesGetter
 }
 
 // SampleV1alpha1Client is used to interact with features provided by the sample.k8s.com group.
@@ -41,6 +42,10 @@ func (c *SampleV1alpha1Client) Fischers() FischerInterface {
 
 func (c *SampleV1alpha1Client) Flunders(namespace string) FlunderInterface {
 	return newFlunders(c, namespace)
+}
+
+func (c *SampleV1alpha1Client) Fortunes(namespace string) FortuneInterface {
+	return newFortunes(c, namespace)
 }
 
 // NewForConfig creates a new SampleV1alpha1Client for the given config.

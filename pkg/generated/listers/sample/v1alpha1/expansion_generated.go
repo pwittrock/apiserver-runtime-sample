@@ -29,3 +29,11 @@ type FlunderListerExpansion interface{}
 // FlunderNamespaceListerExpansion allows custom methods to be added to
 // FlunderNamespaceLister.
 type FlunderNamespaceListerExpansion interface{}
+
+// FortuneListerExpansion allows custom methods to be added to
+// FortuneLister.
+type FortuneListerExpansion interface{}
+
+// FortuneNamespaceListerExpansion allows custom methods to be added to
+// FortuneNamespaceLister.
+type FortuneNamespaceListerExpansion interface{}
