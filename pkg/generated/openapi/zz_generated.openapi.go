@@ -426,8 +426,14 @@ func schema_pkg_apis_sample_v1alpha1_fortuneTableConverter(ref common.ReferenceC
 							Ref: ref("k8s.io/apimachinery/pkg/apis/meta/v1.Table"),
 						},
 					},
+					"i": {
+						SchemaProps: spec.SchemaProps{
+							Type:   []string{"integer"},
+							Format: "int32",
+						},
+					},
 				},
-				Required: []string{"Table"},
+				Required: []string{"Table", "i"},
 			},
 		},
 		Dependencies: []string{

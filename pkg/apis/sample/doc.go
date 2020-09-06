@@ -14,7 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// +k8s:deepcopy-gen=package
 // +groupName=sample.k8s.com
 
 // Package sample provides the internal version of all APIs in the sample.k8s.com API group.

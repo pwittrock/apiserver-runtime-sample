@@ -19,6 +19,8 @@ package v1alpha1
 import (
 	"context"
 
+	"github.com/pwittrock/apiserver-runtime/pkg/builder/resource/resourcestrategy"
+
 	"github.com/pwittrock/apiserver-runtime/pkg/builder/resource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -27,9 +29,8 @@ import (
 )
 
 var _ resource.Object = &Flunder{}
-var _ resource.ListObject = &FlunderList{}
-var _ resource.Validater = &Flunder{}
-var _ resource.ValidateUpdater = &Flunder{}
+var _ resourcestrategy.Validater = &Flunder{}
+var _ resourcestrategy.ValidateUpdater = &Flunder{}
 
 // ReferenceType defines the type of an object reference.
 type ReferenceType string
@@ -103,9 +104,7 @@ func (Flunder) NewList() runtime.Object {
 // Validate implements resource.Validater
 func (f *Flunder) Validate(_ context.Context) field.ErrorList {
 	allErrs := field.ErrorList{}
-
 	allErrs = append(allErrs, validateFlunderSpec(&f.Spec, field.NewPath("spec"))...)
-
 	return allErrs
 }
 

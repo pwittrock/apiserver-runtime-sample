@@ -6,7 +6,8 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/pwittrock/apiserver-runtime/pkg/builder/rest"
+	"github.com/pwittrock/apiserver-runtime/pkg/builder/resource/resourcerest"
+
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/apis/meta/internalversion"
@@ -132,8 +133,8 @@ func (f *FortuneList) GetListMeta() *metav1.ListMeta {
 
 // Rest functions
 
-var _ rest.Getter = &Fortune{}
-var _ rest.Lister = &Fortune{}
+var _ resourcerest.Getter = &Fortune{}
+var _ resourcerest.Lister = &Fortune{}
 
 // ConvertToTable handles table printing from kubectl get
 func (f *Fortune) ConvertToTable(ctx context.Context, object runtime.Object, tableOptions runtime.Object) (*metav1.Table, error) {
