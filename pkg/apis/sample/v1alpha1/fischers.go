@@ -60,8 +60,8 @@ func (f *Fischer) GetObjectMeta() *metav1.ObjectMeta {
 	return &f.ObjectMeta
 }
 
-// IsInternalVersion returns true -- v1alpha1.Fischer is used as the internal version.
-// IsInternal implements resource.Object.
+// IsStorageVersion returns true -- v1alpha1.Fischer is used as the internal version.
+// IsStorageVersion implements resource.Object.
 func (Fischer) IsStorageVersion() bool {
 	return true
 }
