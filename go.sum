@@ -469,6 +469,8 @@ github.com/prometheus/procfs v0.1.3/go.mod h1:lV6e/gmhEcM9IjHGsFOCxxuZ+z1YqCvr4O
 github.com/prometheus/tsdb v0.7.1/go.mod h1:qhTCs0VvXwvX/y3TZrWD7rabWM+ijKTux40TwIPHuXU=
 github.com/pwittrock/apiserver-runtime v0.0.0-20200906153016-fb9bd2572715 h1:vI3C9VrvKkipyWRFbbkMZswR+QKcX3Dz6eH+ERcQT68=
 github.com/pwittrock/apiserver-runtime v0.0.0-20200906153016-fb9bd2572715/go.mod h1:9ttNwiBywN4YJw2KMxepMl785vCS1+XKV33YWr/2NUM=
+github.com/pwittrock/apiserver-runtime v0.0.0-20200908143328-237f7f6cdf62 h1:LY683C5spcZSzQmhJ/3d3GJZwWCg4XRzdmH3mizGFqs=
+github.com/pwittrock/apiserver-runtime v0.0.0-20200908143328-237f7f6cdf62/go.mod h1:9ttNwiBywN4YJw2KMxepMl785vCS1+XKV33YWr/2NUM=
 github.com/quasilyte/go-consistent v0.0.0-20190521200055-c6f3937de18c/go.mod h1:5STLWrekHfjyYwxBRVRXNOSewLJ3PWfDJd1VyTS21fI=
 github.com/quasilyte/go-ruleguard v0.1.2-0.20200318202121-b00d7a75d3d8 h1:DvnesvLtRPQOvaUbfXfh0tpMHg29by0H7F2U+QIkSu8=
 github.com/quasilyte/go-ruleguard v0.1.2-0.20200318202121-b00d7a75d3d8/go.mod h1:CGFX09Ci3pq9QZdj86B+VGIdNj4VyCo2iPOGS9esB/k=

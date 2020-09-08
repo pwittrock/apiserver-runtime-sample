@@ -81,7 +81,7 @@ func (f *Flunder) GetObjectMeta() *metav1.ObjectMeta {
 
 // IsInternalVersion returns true -- v1alpha1.Flunder is used as the internal version.
 // IsInternal implements resource.Object.
-func (Flunder) IsInternalVersion() bool {
+func (Flunder) IsStorageVersion() bool {
 	return true
 }
 

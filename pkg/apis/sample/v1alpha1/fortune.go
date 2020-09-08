@@ -96,7 +96,7 @@ func (f *Fortune) GetObjectMeta() *metav1.ObjectMeta {
 
 // IsInternalVersion returns true -- v1alpha1.Fortune is used as the internal version.
 // IsInternal implements resource.Object.
-func (Fortune) IsInternalVersion() bool {
+func (Fortune) IsStorageVersion() bool {
 	return true
 }
 
