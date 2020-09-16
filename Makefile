@@ -19,7 +19,7 @@ apiserver-logs:
 	kubectl logs -l apiserver=true --container apiserver -n sample-system -f --tail 1000
 
 codegen:
-	./hack/update-codegen.sh
+	go generate
 
 fix:
 	go fix ./...
